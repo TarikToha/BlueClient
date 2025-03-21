@@ -2,11 +2,13 @@
 
 ## Project Summary
 
-- A macOS app developed using Swift, Cocoa, and CoreBluetooth.
-- Acts as a BLE Peripheral that advertises a custom service with two characteristics.
-- rxCharacteristic (notify) is used to send data to the connected central device.
-- txCharacteristic (writeWithoutResponse) is used to receive data from the central.
-- Begins advertising when the user starts the process and the peripheral is ready.
-- Stops advertising automatically once a central subscribes to the notify characteristic.
-- Allows the user to send text input to the connected central.
-- Logs Bluetooth status updates, subscription events, and message exchange in a debug area.
+- A macOS app built with Swift, Cocoa (AppKit), and CoreBluetooth.
+- Acts as a BLE Peripheral that advertises a custom GATT service.
+- Defines two characteristics:
+  - rxCharacteristic (notify) to send data to a connected central.
+  - txCharacteristic (writeWithoutResponse) to receive data from a central.
+- Advertising is manually triggered via a user interface button.
+- Stops advertising once a central subscribes to the notify characteristic.
+- Allows users to input and send messages through the GUI.
+- Displays a real-time debug log in the interface using NSTextField.
+- Handles Bluetooth state updates, subscriptions, and data exchange.
